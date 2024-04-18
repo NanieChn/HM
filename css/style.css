@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+}
+:root{
+    --darkViolet: rgb(140, 48, 155);
+}
+body{
+    height: 100vh;
+    display: flex;
+    background-image: url(../pictures/Bracelet_«Sérénité»_en_Améthyste_-_10mm___22cm.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 100vh;
+    justify-content: center;
+    gap: 5vh;
+    align-items: center;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    width: 80%;
+}
+.image_container{
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+}
+.home{
+    background-image: url(../pictures/maison\ \(1\).png);
+}
+.home:hover{
+    background-image: url(../pictures/maison.png);
+    transition: 1s ease;
+}
+.about_us{
+    background-image: url(../pictures/lightLogo.jpg);
+    transform: scale(1.5);
+}
+.about_us:hover{
+    transform: scale(1.75);
+    transition: 1s ease;
+}
+.store{
+    background-image: url(../pictures/sac-de-courses\ \(1\).png);
+    animation: fromHeaven 1s forwards;
+}
+.store:hover{
+    background-image: url(../pictures/sac-de-courses.png);
+    /*animation-play-state: paused;*/
+    transition: 1s ease;
+}
+.letters{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    animation: letters 1s ease;
+}
+h1{
+    font-size: 50px;
+}
+p{
+    font-style: italic;
+}
+button{
+    width: 20vw;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 20px;
+    background-color: var(--darkViolet);
+    color: white;
+    border: 2px solid var(--darkViolet);
+}
+button:hover{
+    color: var(--darkViolet);
+    background-color: white;
+    transition: 1s ease;
+}
+@keyframes letters{
+    from{
+        transform: translateY(25%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+@keyframes fromHeaven{
+    from{
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+@media  screen and (width < 700px) {
+    body{
+        background-image: none;
+    }
+    button{
+        width: 40vw;
+    }
+}
