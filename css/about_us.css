@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+}
+:root{
+    --darkViolet: rgb(140, 48, 155);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    position: relative;
+}
+header{
+    background-color: var(--darkViolet);
+    height: 70vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
+nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--darkViolet);
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    transition: 1s ease;
+}
+.swicth{
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+.swicth input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider{
+    background-color: red;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.5s;
+    border-radius: 30px;
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px yellow;
+    background-color: black;
+    transition: 0.5s;
+}
+input:checked + .slider{
+    background-color: var(--darkViolet);
+}
+input:checked + .slider::before{
+    transform: translateX(100%);
+    box-shadow: inset 8px -4px 0px 0px yellow;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    gap: 20px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+.image_container{
+    font-weight: bold;
+    letter-spacing: 5px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.logo{
+    background-image: url(../pictures/lightLogo.jpg);
+    transform: scale(1.5);
+}
+.logo::after{
+    position: absolute;
+    content: ". Heaven Mark .";
+    left: 100px;
+    width: 300px;
+}
+.poiret-one-regular {
+    font-family: "Poiret One", sans-serif;
+    font-style: normal;
+}
+.image_of_about{
+    height: 30vh;
+    display: flex;
+}
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.map{
+    background-image: url(../pictures/emplacement.png);
+}
+.map::after{
+    position: absolute;
+    content: ". Meeting place .";
+    left: 215px;
+    width: 300px;
+    color: var(--darkViolet);
+    transform: scale(1.5);
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darkViolet);
+    overflow-x: hidden;
+}
+address{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    border-top: 5px solid var(--darkViolet);
+    border-left: 5px solid var(--darkViolet);
+    border-right: 5px solid var(--darkViolet);
+}
+.facebook{
+    background-image: url(../pictures/square-facebook.svg); 
+}
+.facebook:hover{
+    background-image: url(../pictures/square-facebook-white.svg); 
+    transition: 1s ease;
+}
+.instagram{
+    background-image: url(../pictures/square-instagram.svg); 
+}
+.instagram:hover{
+    background-image: url(../pictures/square-instagram-white.svg); 
+    transition: 1s ease;
+}
+.linkedin{
+    background-image: url(../pictures/linkedin.svg); 
+}
+.linkedin:hover{
+    background-image: url(../pictures/linkedin-white.svg); 
+    transition: 1s ease;
+}
+span{
+    animation: remark 10s ease infinite;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: black;
+    font-style: italic;
+}
+@keyframes remark{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+@media screen and (width < 700px) {
+    header{
+        height: 100vh;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;    
+    }
+    section{
+        flex-direction: column;
+    }
+    .logo::after{
+        width: 200px;
+        left: 50px;
+    }
+    .image_of_product{
+        width: 100vw;
+    }
+    img{
+        border-radius: 0;
+    }
+    .map::after{
+        width: 215px;
+        left: 115px;
+    }
+}
