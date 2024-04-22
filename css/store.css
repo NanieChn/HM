@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    text-align: center;
+}
+:root{
+    --titleSize: 50px;
+    --darkViolet: rgb(140, 48, 155);
+    --typeOfGrey:rgb(117, 123, 113);
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--typeOfGrey);
+    gap: 5vh;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5vw;
+    align-items: center;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    gap: 6vw;
+    background-color: white;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+}
+.image_container{
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+}
+.home{
+    background-image: url(../pictures/maison\ \(1\).png);
+}
+.home:hover{
+    background-image: url(../pictures/maison.png);
+    transition: 1s ease;
+}
+.about_us{
+    background-image: url(../pictures/lightLogo.jpg);
+    transform: scale(1.5);
+}
+.about_us:hover{
+    transform: scale(1.75);
+    transition: 1s ease;
+}
+.store{
+    background-image: url(../pictures/sac-de-courses\ \(1\).png);
+}
+.store:hover{
+    background-image: url(../pictures/sac-de-courses.png);
+    transition: 1s ease;
+}
+h1{
+    font-size: var(--titleSize);
+    color: white;
+    animation: welcome 2s ease;
+}
+.choice_container{
+    align-items: normal;
+}
+a{
+    text-decoration: none;
+    color: var(--darkViolet);
+}
+.choice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+    gap: 2.5vh;
+    background-color: white;
+}
+.choice:hover{
+    transform: scale(1.075);
+    transition: 1s ease;
+}
+img{
+    border-radius: 10px;
+    width: 15vw;
+    height: 20vh;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+span{
+    display: none;
+}
+p{
+    width: 15vw;
+}
+.poiret-one-regular {
+    font-family: "Poiret One", sans-serif;
+    font-style: normal;
+}
+@keyframes welcome{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@media  screen and (width < 700px) {
+    .container{
+        flex-direction: column-reverse;
+    }
+    .container_choice{
+        flex-direction: column;
+    }
+    .choice{
+        flex-direction: row;
+        gap: 7vw;
+    }    
+    img{
+        display: none;
+    }
+    span{
+        display: inline;
+    }
+    p{
+        display: none;
+    }
+}
