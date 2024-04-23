@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+:root{
+    --darkViolet: rgb(140, 48, 155);
+    --typeOfGrey:rgb(117, 123, 113);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--typeOfGrey);
+}
+nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    z-index: 2;
+    justify-content: space-between;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    background-color: white;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+}
+.image_container{
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+}
+.home{
+    background-image: url(../pictures/maison\ \(1\).png);
+}
+.home:hover{
+    background-image: url(../pictures/maison.png);
+    transition: 1s ease;
+}
+.about_us{
+    background-image: url(../pictures/lightLogo.jpg);
+    transform: scale(1.5);
+}
+.about_us:hover{
+    transform: scale(1.75);
+    transition: 1s ease;
+}
+.store{
+    background-image: url(../pictures/sac-de-courses\ \(1\).png);
+}
+.store:hover{
+    background-image: url(../pictures/sac-de-courses.png);
+    transition: 1s ease;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5vw;
+    padding: 20px;
+    margin-bottom:25vh;
+}
+.informations{
+    display: none;
+}
+.poiret-one-regular {
+    font-family: "Poiret One", sans-serif;
+    font-style: normal;
+}
+.image_of_product{
+    width: 30%;
+    height: 60%;
+    display: flex;
+}
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.icons-informations{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 20px;
+    width: 40%;
+    background-color: white;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+.map{
+    background-image: url(../pictures/emplacement.png);
+    position: relative;
+}
+.map:hover{
+    background-image: url(../pictures/emplacement\ \(1\).png);
+    transition: 1s ease;
+}
+.map-one::after{
+    content: "Malaza Andoharanofotsy(11h - 12h)";
+    position: absolute;
+    left: 75px;
+    color: black;
+    width: 150px;
+}
+.price{
+    background-image: url(../pictures/dollar.png);
+    position: relative;
+}
+.price-one::after{
+    content: "23,95 USD";
+    position: absolute;
+    left: 75px;
+    color: black;
+    width: 150px;
+}.price-1::after{
+    content: "1,27 USD(5)";
+    position: absolute;
+    left: 75px;
+    color: black;
+    width: 150px;
+}
+.store{
+    background-image: url(../pictures/sac-de-courses\ \(1\).png);
+    position: relative;
+}
+.store:hover{
+    background-image: url(../pictures/sac-de-courses.png);
+    transition: 1s ease;
+}
+.store-info::after{
+    content: "0 command";
+    position: absolute;
+    left: 75px;
+    color: black;
+    width: 150px;
+}
+.letters{
+    text-align: right;
+}
+h1{
+    font-size: 50px;
+}
+input{
+    letter-spacing: normal;
+}
+.short{
+    display: none;
+}
+button{
+    width: 15vw;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--darkViolet);
+    color: white;
+    border: 2px solid var(--darkViolet);
+}
+button:hover{
+    color: var(--darkViolet);
+    background-color: white;
+    transition: 1s ease;
+}
+.section_reverse .letters{
+    text-align: left;
+    margin-bottom: 25vh;
+}
+.map-two::after{
+    content: "Daydreamer Analakely(11h - 12h)";
+    position: absolute;
+    left: 75px;
+    color: black;
+    width: 150px;
+}
+.price-two::after{
+    content: "1,27 USD";
+    position: absolute;
+    left: 75px;
+    color: black;
+    width: 150px;
+}
+@media  screen and (width < 700px) {
+    .icons{
+        flex-direction: column;
+    }
+    section{
+        flex-direction: column;
+    }
+    .informations{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .informations p{
+        display: block;
+        color: var(--darkViolet);
+    }
+    .image_of_product{
+        width: 100%;
+    }
+    .icons-informations{
+        display: none;
+    }
+    .letters h1{
+        display: none;
+    }
+    span{
+        display: none;
+    }
+    .short{
+        display: inline;
+    }
+    button{
+        width: 100%;
+    }
+    .section_reverse{
+        flex-direction: column-reverse;
+    }
+}
+
+
