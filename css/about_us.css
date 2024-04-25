@@ -36,6 +36,7 @@ nav{
     box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
     background-color: var(--darkViolet);
     justify-content: space-between;
+    z-index: 2;
 }
 ul{
     display: flex;
@@ -51,7 +52,7 @@ a:hover{
     transition: 1s ease;
 }
 .swicth{
-    font-size: 17px;
+    font-size: 7px;
     position: relative;
     display: inline-block;
     width: 3.5em;
