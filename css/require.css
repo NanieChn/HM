@@ -207,7 +207,6 @@ button:hover{
     }
     .informations p{
         display: block;
-        color: var(--darkViolet);
     }
     .image_of_product{
         width: 100%;
