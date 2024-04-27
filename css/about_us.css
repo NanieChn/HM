@@ -35,13 +35,13 @@ nav{
     letter-spacing: 5px;
     box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
     background-color: var(--darkViolet);
-    justify-content: space-between;
     z-index: 2;
 }
 ul{
+    width: 30%;
     display: flex;
     flex-direction: row;
-
+    justify-content: space-evenly;
 }
 a{
     color: black;
@@ -50,48 +50,6 @@ a{
 a:hover{
     color: white;
     transition: 1s ease;
-}
-.swicth{
-    font-size: 7px;
-    position: relative;
-    display: inline-block;
-    width: 3.5em;
-    height: 2em;
-}
-.swicth input{
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-.slider{
-    background-color: red;
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: 0.5s;
-    border-radius: 30px;
-}
-.slider::before{
-    position: absolute;
-    content: "";
-    height: 1.4em;
-    width: 1.4em;
-    border-radius: 50%;
-    left: 10%;
-    bottom: 15%;
-    box-shadow: inset 8px -4px 0px 0px yellow;
-    background-color: black;
-    transition: 0.5s;
-}
-input:checked + .slider{
-    background-color: var(--darkViolet);
-}
-input:checked + .slider::before{
-    transform: translateX(100%);
-    box-shadow: inset 8px -4px 0px 0px yellow;
 }
 main{
     display: flex;
@@ -170,24 +128,24 @@ address{
     border-right: 5px solid var(--darkViolet);
 }
 .facebook{
-    background-image: url(../pictures/square-facebook.svg); 
+    background-image: url(../pictures/facebook\(1\).png); 
 }
 .facebook:hover{
-    background-image: url(../pictures/square-facebook-white.svg); 
+    background-image: url(../pictures/facebook.png); 
     transition: 1s ease;
 }
 .instagram{
-    background-image: url(../pictures/square-instagram.svg); 
+    background-image: url(../pictures/instagram.png); 
 }
 .instagram:hover{
-    background-image: url(../pictures/square-instagram-white.svg); 
+    background-image: url(../pictures/instagram\ \(1\).png); 
     transition: 1s ease;
 }
 .linkedin{
-    background-image: url(../pictures/linkedin.svg); 
+    background-image: url(../pictures/linkedin\ \(1\).png); 
 }
 .linkedin:hover{
-    background-image: url(../pictures/linkedin-white.svg); 
+    background-image: url(../pictures/linkedin.png); 
     transition: 1s ease;
 }
 span{
