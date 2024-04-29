@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-weight: bold;
     letter-spacing: 5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-family: cursive;
     text-align: center;
 }
 :root{
@@ -102,10 +102,6 @@ span{
 }
 p{
     width: 15vw;
-}
-.poiret-one-regular {
-    font-family: "Poiret One", sans-serif;
-    font-style: normal;
 }
 @keyframes welcome{
     from{

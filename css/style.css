@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-weight: bold;
     letter-spacing: 5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-family: cursive;
 }
 :root{
     --darkViolet: rgb(140, 48, 155);

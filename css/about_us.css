@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-family: cursive;
     letter-spacing: 2.5px;
     font-weight: bold;
 }
@@ -85,10 +85,6 @@ section{
     content: ". Heaven Mark .";
     left: 100px;
     width: 300px;
-}
-.poiret-one-regular {
-    font-family: "Poiret One", sans-serif;
-    font-style: normal;
 }
 .image_of_about{
     height: 30vh;
